@@ -1,0 +1,14 @@
+<div class="pagination mt-5 mb-5" style="display: flex; justify-content: center; bottom: 100%">
+    <span class="step-links">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}" class="back-page">Назад</a>
+        {% endif %}
+        <span class="current">
+            Страница {{ page.number }} из {{ page.paginator.num_pages }}
+        </span>
+        {% if page.has_next %}
+        <a href="?page={{ page.next_page_number }}" class="next-page">Вперед</a>
+        {% endif %}
+    </span>
+</div>
+

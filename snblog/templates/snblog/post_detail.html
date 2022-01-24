@@ -1,0 +1,33 @@
+{% extends "snblog/base.html" %}
+
+{% block content %}
+
+
+<div class="post-detail row">
+    {% if post.created %}
+    <div class="post-author col-2">
+        <div class="avatar" id="outer">
+            <div id="inner">
+                <p>Аватар</p>
+            </div>
+        </div>
+        <div class="nickname">
+            <p class="nickname-author">{{post.author}}</p>
+        </div>
+    </div>
+    <div class="post col-10">
+        <div class="post-title">
+            <h1 class="post-title">{{ post.title }}</h1>
+        </div>
+        <hr>
+        <div class="post-text">
+            <p>{{ post.text }}</p>
+        </div>
+        <div class="date">
+            <p>{{post.created | date:"d"}}.{{post.created | date:"m"}}.{{post.created | date:"Y"}} {{post.created | time:"G:i"}}</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "snblog/base.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+<div class="card mb-3 m-5" style="max-width: 750px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{post.image.url}}" alt="{{post.title}}" class="img-crush img-fluid img-border-round">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <p class="card-text">{{post.text | truncatewords:10}}</p>
+        <a href="{% url 'post_detail' pk=post.pk %}" alt="{{post.title}}" class="btn btn-primary">Перейти в пост</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% include "snblog/paginator.html" with page=posts %}
+{% endblock %}
