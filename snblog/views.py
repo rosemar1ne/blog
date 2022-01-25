@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from snblog.models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from .forms import CommentForm
+
 
 def posts(request):
     posts = Post.objects.all()
@@ -21,5 +23,18 @@ def posts(request):
 
 def post(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, "snblog/post_detail.html", {"post": post})
+    comments = post.comment.filter (active=True)
+    form = CommentForm
 
+
+    if request.method == "POST":
+        form = CommentForm(data=request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+
+    return render(request, "snblog/post_detail.html", {"post": post,
+                                                       "comments": comments,
+                                                       "form": form
+                                                       })

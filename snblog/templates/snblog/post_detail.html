@@ -30,4 +30,34 @@
     {% endif %}
 </div>
 
+
+{% for comment in comments %}
+<div class="post-detail-com row">
+    <div class="post-author-com col-2">
+        <div class="avatar-commentor" id="outer-com">
+            <div id="inner-com">
+                <p>Аватар</p>
+            </div>
+        </div>
+        <div class="nickname-com">
+            <p class="nickname-commentor">{{ comment.username }}</p>
+        </div>
+    </div>
+    <div class="post col-10">
+        <div class="post-text-com">
+            <p>{{ comment.text }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<div class="container">
+    <div class="comments-form">
+       <form action="" method="post"> {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary">
+       </form>
+    </div>
+</div>
+
 {% endblock %}
