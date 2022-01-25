@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{post.title}}</h5>
+        <h4 class="card-title">{{post.title}}</h4>
         <p class="card-text">{{post.text | truncatewords:10}}</p>
         <a href="{% url 'post_detail' pk=post.pk %}" alt="{{post.title}}" class="btn btn-primary">Перейти в пост</a>
       </div>
