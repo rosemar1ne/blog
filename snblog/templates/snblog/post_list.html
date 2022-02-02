@@ -12,7 +12,7 @@
       <div class="card-body">
         <h4 class="card-title">{{post.title}}</h4>
         <p class="card-text">{{post.text | truncatewords:10}}</p>
-        <a href="{% url 'post_detail' pk=post.pk %}" alt="{{post.title}}" class="btn btn-primary">Перейти в пост</a>
+        <a href="{% url 'post_detail' pk=post.pk %}" alt="{{post.title}}" class="btn btn-outline-success btn-list">Перейти в пост</a>
       </div>
     </div>
   </div>

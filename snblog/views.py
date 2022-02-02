@@ -4,6 +4,14 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import CommentForm
 
 
+def about_me(request):
+    return render(request, "snblog/about_me.html")
+
+
+def startpage(request):
+    return render(request, "snblog/startpage.html")
+
+
 def posts(request):
     posts = Post.objects.all()
     paginator = Paginator(posts.order_by("-id"), 5)
@@ -23,7 +31,7 @@ def posts(request):
 
 def post(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    comments = post.comment.filter (active=True)
+    comments = post.comment.filter(active=True)
     form = CommentForm
 
 

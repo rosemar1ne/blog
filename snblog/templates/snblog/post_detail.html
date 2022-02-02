@@ -54,10 +54,9 @@
 <div class="container">
     <div class="comments-form">
        <form action="" method="post"> {% csrf_token %}
-            {{form.as_p}}
-            <input type="submit" class="btn btn-primary">
+            {{form}}
+            <input type="submit" class="btn btn-outline-success">
        </form>
     </div>
 </div>
-
 {% endblock %}
