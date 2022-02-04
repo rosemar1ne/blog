@@ -84,5 +84,42 @@ a:hover, a:focus {
  }
 }
 
+@media screen and (min-width: 390px) and (max-width: 500px) {
+ #hi-centered {
+    text-align: center;
+    font-size: 30px!important;
+    margin-bottom: -20px;
+    display: block!important;
+ }
 
+ #me-resized {
+    font-size: 35px!important;
+ }
+
+ .hello-align h2 {
+    display: inline;
+ }
+
+ #smiley {
+    display: inline-block!important;
+ }
+}
+
+@media screen and (max-width: 390px) {
+    h2 {
+        font-size: 25px!important;
+        display: inline!important;
+    }
+
+    #smiley {
+        display: inline-block!important;
+    }
+
+    h1 {
+        font-size: 30px!important;
+    }
+
+
+
+}
 
