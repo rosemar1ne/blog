@@ -1,24 +1,48 @@
-{% extends "snblog/base.html" %}
-
-{% block content %}
-
-<div id="headerwrap">
-  <div class="container-fluid">
-    <div class="row centered">
-      <div class="col-lg-8 offset-lg-2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ipsam iure repudiandae voluptatum. Beatae, consectetur corporis explicabo fuga ipsam provident ratione tempora? Est expedita illo iste possimus. Dignissimos, possimus.</p>
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static '/css/mainstyles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/startpage.css' %}" type="text/css">
+    <link rel="icon" href="{% static '/favicon/favicon.ico' %}" type="image/x-icon">
+    <title>BLOG</title>
+</head>
+<body style="background-image: url('{% static 'technical images/background.jpg' %}')">
+  <div id="startpage-wrapper">
+    <div id="startpage-container">
+      <div class="container">
+        <div class="row flex-row-reverse">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-5 hello-image">
+            <img class="here mx-auto d-block" src="{% static 'technical images/me.jpg' %}" alt="pog">
+          </div>
+          <div class="col-lg-5" id="hello-wrapper">
+            <div class="hello-align" id="hello-container">
+              <h2>Hi there! 👋</h2>
+              <br>
+              <br>
+              <h1>I'm Oleg Shimanovich.</h1>
+              <br>
+              <h2>I'm a junior Django developer since 2022</h2>
+              <h2>and this is a blog about my favourite serials.</h2>
+              <h2>Hope you'll enjoy it 🤩</h2>
+              <br>
+              <br>
+              <h2><a href="{% url 'post_list' %}">Don't be shy and come inside!<i style="padding-left: 5px" class="fad fa-angle-double-right"></i></a></h2>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-{% endblock %}
+
+
+</body>
+
+

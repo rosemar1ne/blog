@@ -11,32 +11,33 @@
     <title>BLOG</title>
 </head>
 <body style="background-image: url('{% static 'technical images/background.jpg' %}')">
-  <div class="body-wrapper">
-    <nav class="navbar top navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-lg">
-        <a class="navbar-brand" href="{% url 'startpage' %}">BL<i class="fas fa-play-circle"></i>G</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <hr>
-          <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'startpage' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == '/posts/' %}active{% endif %}" href="{% url 'post_list' %}">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == '/me/' %}active{% endif %}" href="{% url 'about_me' %}">About me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:rosemarinesteam@gmail.com"><i class="far fa-envelope fa-lg"></i></a>
-            </li>
-          </ul>
+    <div class="body-wrapper">
+      <nav class="navbar top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-lg">
+          <a class="navbar-brand" href="{% url 'startpage' %}">BL<i class="fas fa-play-circle"></i>G</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <hr>
+            <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'startpage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == '/posts/' %}active{% endif %}" href="{% url 'post_list' %}">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == '/me/' %}active{% endif %}" href="{% url 'about_me' %}">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mailto:rosemarinesteam@gmail.com"><i class="far fa-envelope fa-lg"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
 
 
 {% block content %}
